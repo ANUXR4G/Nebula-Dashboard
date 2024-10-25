@@ -93,9 +93,7 @@ function Dashboard(props) {
           >
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6" noWrap component="div">
-            Responsive drawer
-          </Typography>
+         
         </Toolbar>
       </AppBar>
       <Box
