@@ -40,7 +40,7 @@ function Dashboard(props) {
   };
 
   const drawer = (
-    <div>
+    <div className='bg-green-600'>
       <Toolbar className='bg-green-600'/>
       <img src={logo}></img>
       <Divider className='bg-green-600'/>
