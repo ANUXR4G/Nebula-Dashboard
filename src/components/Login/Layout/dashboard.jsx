@@ -40,31 +40,31 @@ function Dashboard(props) {
   };
 
   const drawer = (
-    <div className='bg-green-600'>
-      <Toolbar className='bg-green-600'/>
-      <img src={logo}></img>
-      <Divider className='bg-green-600'/>
-      <List className='bg-green-600'>
+    <div className='bg-[#4c5d34] h-screen'>
+      <Toolbar className='bg-[#4c5d34]'/>
+      <img src={logo} alt="Logo" />
+      <Divider className='bg-[#4c5d34]'/>
+      <List className='bg-[#4c5d34]'>
         {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
           <ListItem key={text} disablePadding>
             <ListItemButton>
               <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                {index % 2 === 0 ? <InboxIcon style={{ color: 'white' }} /> : <MailIcon style={{ color: 'white' }} />}
               </ListItemIcon>
-              <ListItemText primary={text} />
+              <ListItemText primary={text} primaryTypographyProps={{ style: { color: 'white' } }} />
             </ListItemButton>
           </ListItem>
         ))}
       </List>
       <Divider />
-      <List className='bg-green-600'>
+      <List className='bg-[#4c5d34]'>
         {['All mail', 'Trash', 'Spam'].map((text, index) => (
           <ListItem key={text} disablePadding>
             <ListItemButton>
               <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                {index % 2 === 0 ? <InboxIcon style={{ color: 'white' }} /> : <MailIcon style={{ color: 'white' }} />}
               </ListItemIcon>
-              <ListItemText primary={text} />
+              <ListItemText primary={text} primaryTypographyProps={{ style: { color: 'white' } }} />
             </ListItemButton>
           </ListItem>
         ))}
@@ -84,7 +84,7 @@ function Dashboard(props) {
           ml: { sm: `${drawerWidth}px` },
         }}
       >
-        <Toolbar>
+        <Toolbar className='bg-[#4c5d34]'>
           <IconButton
             color="inherit"
             aria-label="open drawer"
