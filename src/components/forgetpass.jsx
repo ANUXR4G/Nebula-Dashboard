@@ -2,8 +2,8 @@
 
 import React from "react";
 import Player from 'lottie-react'; // Use default import
-import animationData from '../../assets/nebula-login-lottie.json';
-import LockData from '../../assets/forgetpass-lottie.json';
+import animationData from '../assets/nebula-login-lottie.json';
+import LockData from '../assets/login-lock-lottie.json';
 
 const LoginPage = () => {
   return (
