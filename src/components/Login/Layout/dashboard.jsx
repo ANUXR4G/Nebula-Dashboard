@@ -15,7 +15,7 @@ import ListItemText from '@mui/material/ListItemText';
 import MailIcon from '@mui/icons-material/Mail';
 import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
+import logo from "../../../assets/nebula.png"
 
 const drawerWidth = 240;
 
@@ -41,9 +41,10 @@ function Dashboard(props) {
 
   const drawer = (
     <div>
-      <Toolbar />
-      <Divider />
-      <List>
+      <Toolbar className='bg-green-600'/>
+      <img src={logo}></img>
+      <Divider className='bg-green-600'/>
+      <List className='bg-green-600'>
         {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
           <ListItem key={text} disablePadding>
             <ListItemButton>
@@ -56,7 +57,7 @@ function Dashboard(props) {
         ))}
       </List>
       <Divider />
-      <List>
+      <List className='bg-green-600'>
         {['All mail', 'Trash', 'Spam'].map((text, index) => (
           <ListItem key={text} disablePadding>
             <ListItemButton>
