@@ -6,7 +6,7 @@ import CssBaseline from '@mui/material/CssBaseline';
 import Divider from '@mui/material/Divider';
 import Drawer from '@mui/material/Drawer';
 import IconButton from '@mui/material/IconButton';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
+import HomeIcon from '@mui/icons-material/Home';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
@@ -16,6 +16,7 @@ import MailIcon from '@mui/icons-material/Mail';
 import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import logo from "../../../assets/nebula.png"
+import Person4Icon from '@mui/icons-material/Person4';
 
 const drawerWidth = 240;
 
@@ -45,11 +46,11 @@ function Dashboard(props) {
       <img src={logo} alt="Logo" />
       <Divider className='bg-[#4c5d34]'/>
       <List className='bg-[#4c5d34]'>
-        {['Home Page', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
+        {['Home Page', 'Mentors', 'Send email', 'Drafts'].map((text, index) => (
           <ListItem key={text} disablePadding>
             <ListItemButton>
               <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon style={{ color: 'white' }} /> : <MailIcon style={{ color: 'white' }} />}
+                {index % 2 === 0 ? <HomeIcon style={{ color: 'white' }} /> : <Person4Icon style={{ color: 'white' }} />}
               </ListItemIcon>
               <ListItemText primary={text} primaryTypographyProps={{ style: { color: 'white' } }} />
             </ListItemButton>
@@ -62,7 +63,7 @@ function Dashboard(props) {
           <ListItem key={text} disablePadding>
             <ListItemButton>
               <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon style={{ color: 'white' }} /> : <MailIcon style={{ color: 'white' }} />}
+                {index % 2 === 0 ? <HomeIcon style={{ color: 'white' }} /> : <MailIcon style={{ color: 'white' }} />}
               </ListItemIcon>
               <ListItemText primary={text} primaryTypographyProps={{ style: { color: 'white' } }} />
             </ListItemButton>
