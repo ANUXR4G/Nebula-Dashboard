@@ -15,8 +15,10 @@ import ListItemText from '@mui/material/ListItemText';
 import MailIcon from '@mui/icons-material/Mail';
 import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
-import logo from "../../../assets/nebula.png"
-import Person4Icon from '@mui/icons-material/Person4';
+import logo from "../../../assets/nebula.png";
+import CalendarTodayIcon from '@mui/icons-material/CalendarToday';
+import AssignmentIcon from '@mui/icons-material/Assignment';
+import GroupIcon from '@mui/icons-material/Group';
 
 const drawerWidth = 240;
 
@@ -46,11 +48,14 @@ function Dashboard(props) {
       <img src={logo} alt="Logo" />
       <Divider className='bg-[#4c5d34]'/>
       <List className='bg-[#4c5d34]'>
-        {['Home Page', 'Mentors', 'Problem Statement', 'Calender'].map((text, index) => (
+        {['Home Page', 'Mentors', 'Problem Statement', 'Calendar'].map((text, index) => (
           <ListItem key={text} disablePadding>
             <ListItemButton>
               <ListItemIcon>
-                {index % 2 === 0 ? <HomeIcon style={{ color: 'white' }} /> : <Person4Icon style={{ color: 'white' }} />}
+                {index === 0 && <HomeIcon style={{ color: 'white' }} />}
+                {index === 1 && <GroupIcon style={{ color: 'white' }} />}
+                {index === 2 && <AssignmentIcon style={{ color: 'white' }} />}
+                {index === 3 && <CalendarTodayIcon style={{ color: 'white' }} />}
               </ListItemIcon>
               <ListItemText primary={text} primaryTypographyProps={{ style: { color: 'white' } }} />
             </ListItemButton>
