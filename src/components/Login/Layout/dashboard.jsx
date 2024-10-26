@@ -19,6 +19,9 @@ import logo from "../../../assets/nebula.png";
 import CalendarTodayIcon from '@mui/icons-material/CalendarToday';
 import AssignmentIcon from '@mui/icons-material/Assignment';
 import GroupIcon from '@mui/icons-material/Group';
+import SettingsIcon from '@mui/icons-material/Settings';
+import ExitToAppIcon from '@mui/icons-material/ExitToApp';
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 
 const drawerWidth = 240;
 
@@ -64,11 +67,13 @@ function Dashboard(props) {
       </List>
       <Divider />
       <List className='bg-[#4c5d34]'>
-        {['All mail', 'Trash', 'Spam'].map((text, index) => (
+        {['Profile', 'Settings', 'Log Out'].map((text, index) => (
           <ListItem key={text} disablePadding>
             <ListItemButton>
               <ListItemIcon>
-                {index % 2 === 0 ? <HomeIcon style={{ color: 'white' }} /> : <MailIcon style={{ color: 'white' }} />}
+                {index === 0 && <AccountCircleIcon style={{ color: 'white' }} />}
+                {index === 1 && <SettingsIcon style={{ color: 'white' }} />}
+                {index === 2 && <ExitToAppIcon style={{ color: 'white' }} />}
               </ListItemIcon>
               <ListItemText primary={text} primaryTypographyProps={{ style: { color: 'white' } }} />
             </ListItemButton>
