@@ -46,7 +46,7 @@ function Dashboard(props) {
       <img src={logo} alt="Logo" />
       <Divider className='bg-[#4c5d34]'/>
       <List className='bg-[#4c5d34]'>
-        {['Home Page', 'Mentors', 'Send email', 'Drafts'].map((text, index) => (
+        {['Home Page', 'Mentors', 'Problem Statement', 'Calender'].map((text, index) => (
           <ListItem key={text} disablePadding>
             <ListItemButton>
               <ListItemIcon>
