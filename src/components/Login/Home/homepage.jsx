@@ -2,6 +2,7 @@ import React from 'react';
 
 const HomePage = () => {
   return (
+    <div className='p-3'>
     <div className="w-full flex flex-col md:flex-row bg-[#818763] rounded-xl p-6 md:p-8">
       {/* Left Section */}
       <div className="flex-1 md:w-1/2 bg-white rounded-lg p-6 flex items-center">
@@ -64,6 +65,7 @@ const HomePage = () => {
           </div>
         </div>
       </div>
+    </div>
     </div>
   );
 };
