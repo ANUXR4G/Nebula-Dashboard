@@ -22,7 +22,7 @@ const Card = ({ title, description, resources, submissionClosed }) => {
       <div className="px-6 py-4">
         <button
           className={`w-full py-2 text-white rounded ${
-            submissionClosed ? 'bg-red-500' : 'bg-green-500'
+            submissionClosed ? 'bg-red-500' : 'bg-[#4c5d34]'
           }`}
         >
           {submissionClosed ? 'Application Closed' : 'Apply'}

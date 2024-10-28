@@ -1,4 +1,24 @@
-import React from "react";
+import React, { useState } from 'react';
+import { LoadingOutlined, PlusOutlined } from '@ant-design/icons';
+import { message, Upload } from 'antd';
+
+const getBase64 = (img, callback) => {
+  const reader = new FileReader();
+  reader.addEventListener('load', () => callback(reader.result));
+  reader.readAsDataURL(img);
+};
+
+const beforeUpload = (file) => {
+  const isJpgOrPng = file.type === 'image/jpeg' || file.type === 'image/png';
+  if (!isJpgOrPng) {
+    message.error('You can only upload JPG/PNG file!');
+  }
+  const isLt2M = file.size / 1024 / 1024 < 2;
+  if (!isLt2M) {
+    message.error('Image must smaller than 2MB!');
+  }
+  return isJpgOrPng && isLt2M;
+};
 
 const UserProfile = () => {
   return (
@@ -79,23 +99,52 @@ const UserProfile = () => {
 };
 
 const UserProfileSettings = () => {
+  const [loading, setLoading] = useState(false);
+  const [imageUrl, setImageUrl] = useState();
+
+  const handleChange = (info) => {
+    if (info.file.status === 'uploading') {
+      setLoading(true);
+      return;
+    }
+    if (info.file.status === 'done') {
+      getBase64(info.file.originFileObj, (url) => {
+        setLoading(false);
+        setImageUrl(url);
+      });
+    }
+  };
+
+  const uploadButton = (
+    <div>
+      {loading ? <LoadingOutlined /> : <PlusOutlined />}
+      <div style={{ marginTop: 8 }}>Upload</div>
+    </div>
+  );
+
   return (
     <div className="container mx-auto p-5">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mb-5">
         {/* User Profile Section */}
         <div className="flex flex-col items-center justify-center p-5 border rounded-lg shadow-md">
-          <div className="bg-teal-200 rounded-full w-24 h-24 flex items-center justify-center mb-3">
-            {/* Profile Image Placeholder */}
-            <span className="text-xl text-teal-600">👤</span>
-          </div>
+          <Upload
+            name="avatar"
+            listType="picture-circle"
+            className="mb-5"
+            showUploadList={false}
+            action="/upload.do"
+            beforeUpload={beforeUpload}
+            onChange={handleChange}
+          >
+            {imageUrl ? <img src={imageUrl} alt="avatar" style={{ width: '100%' }} /> : uploadButton}
+          </Upload>
           <p className="text-sm text-center mb-1">Allowed: *.jpeg, *.jpg, *.png, *.gif</p>
           <p className="text-sm text-center">Max size of 3.1 MB</p>
           <div className="flex items-center mt-2">
             <label htmlFor="public-profile" className="mr-2">Public Profile</label>
-            <input id="public-profile" type="checkbox" />
           </div>
-          <button className="mt-4 px-4 py-2 text-white bg-red-500 rounded-lg">
-            Delete User
+          <button className="mt-4 px-4 py-2 text-white bg-[#4c5d34] rounded-lg">
+            Save Image
           </button>
         </div>
         {/* User Info Form Section */}
