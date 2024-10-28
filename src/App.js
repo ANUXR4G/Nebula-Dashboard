@@ -4,6 +4,7 @@ import LoginPage from './components/Login/login';
 import Layout from './components/Login/Layout/layout';
 import ForgetPassword from './components/Login/forgetpass';
 import HomePage from './components/Login/Home/homepage';
+import DateCalendarFormProps from './components/Login/Home/calender';
 
 const route = createBrowserRouter([
   {
@@ -21,7 +22,11 @@ const route = createBrowserRouter([
       {
         path: "/dashboard",
         element: <HomePage/>
-      }
+      },
+      {
+        path: "/dashboard/calender",
+        element: <DateCalendarFormProps/>
+      },
     ]
   }
 ]);

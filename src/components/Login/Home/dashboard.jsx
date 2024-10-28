@@ -20,6 +20,7 @@ import GroupIcon from '@mui/icons-material/Group';
 import SettingsIcon from '@mui/icons-material/Settings';
 import ExitToAppIcon from '@mui/icons-material/ExitToApp';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import { Link } from 'react-router-dom';
 import logo from "../../../assets/nebula.png";
 
 const drawerWidth = 240;
@@ -38,34 +39,65 @@ function Dashboard(props) {
       <img src={logo} alt="Logo" />
       <Divider className='bg-[#4c5d34]'/>
       <List className='bg-[#4c5d34]'>
-        {['Home Page', 'Mentors', 'Problem Statement', 'Calendar'].map((text, index) => (
-          <ListItem key={text} disablePadding>
-            <ListItemButton>
-              <ListItemIcon>
-                {index === 0 && <HomeIcon style={{ color: 'white' }} />}
-                {index === 1 && <GroupIcon style={{ color: 'white' }} />}
-                {index === 2 && <AssignmentIcon style={{ color: 'white' }} />}
-                {index === 3 && <CalendarTodayIcon style={{ color: 'white' }} />}
-              </ListItemIcon>
-              <ListItemText primary={text} primaryTypographyProps={{ style: { color: 'white' } }} />
-            </ListItemButton>
-          </ListItem>
-        ))}
+        <ListItem disablePadding>
+          <ListItemButton component={Link} to="/dashboard">
+            <ListItemIcon>
+              <HomeIcon style={{ color: 'white' }} />
+            </ListItemIcon>
+            <ListItemText primary="Dashboard" primaryTypographyProps={{ style: { color: 'white' } }} />
+          </ListItemButton>
+        </ListItem>
+        <ListItem disablePadding>
+          <ListItemButton component={Link} to="/custom-mentors-path">
+            <ListItemIcon>
+              <GroupIcon style={{ color: 'white' }} />
+            </ListItemIcon>
+            <ListItemText primary="Mentors" primaryTypographyProps={{ style: { color: 'white' } }} />
+          </ListItemButton>
+        </ListItem>
+        <ListItem disablePadding>
+          <ListItemButton component={Link} to="/custom-problem-statement-path">
+            <ListItemIcon>
+              <AssignmentIcon style={{ color: 'white' }} />
+            </ListItemIcon>
+            <ListItemText primary="Problem Statement" primaryTypographyProps={{ style: { color: 'white' } }} />
+          </ListItemButton>
+        </ListItem>
+        <ListItem disablePadding>
+          <ListItemButton component={Link} to="/dashboard/calender">
+            <ListItemIcon>
+              <CalendarTodayIcon style={{ color: 'white' }} />
+            </ListItemIcon>
+            <ListItemText primary="Calendar" primaryTypographyProps={{ style: { color: 'white' } }} />
+          </ListItemButton>
+        </ListItem>
       </List>
       <Divider />
       <List className='bg-[#4c5d34]'>
-        {['Profile', 'Settings', 'Log Out'].map((text, index) => (
-          <ListItem key={text} disablePadding>
-            <ListItemButton>
-              <ListItemIcon>
-                {index === 0 && <AccountCircleIcon style={{ color: 'white' }} />}
-                {index === 1 && <SettingsIcon style={{ color: 'white' }} />}
-                {index === 2 && <ExitToAppIcon style={{ color: 'white' }} />}
-              </ListItemIcon>
-              <ListItemText primary={text} primaryTypographyProps={{ style: { color: 'white' } }} />
-            </ListItemButton>
-          </ListItem>
-        ))}
+        <ListItem disablePadding>
+          <ListItemButton component={Link} to="/custom-profile-path">
+            <ListItemIcon>
+              <AccountCircleIcon style={{ color: 'white' }} />
+            </ListItemIcon>
+            <ListItemText primary="Profile" primaryTypographyProps={{ style: { color: 'white' } }} />
+          </ListItemButton>
+        </ListItem>
+        <ListItem disablePadding>
+          <ListItemButton component={Link} to="/custom-settings-path">
+            <ListItemIcon>
+              <SettingsIcon style={{ color: 'white' }} />
+            </ListItemIcon>
+            <ListItemText primary="Settings" primaryTypographyProps={{ style: { color: 'white' } }} />
+          </ListItemButton>
+        </ListItem>
+        <ListItem disablePadding>
+          <ListItemButton component={Link} to="/custom-log-out-path">
+            <ListItemIcon>
+              <ExitToAppIcon style={{ color: 'white' }} />
+            </ListItemIcon>
+            <ListItemText primary="Log Out" primaryTypographyProps={{ style: { color: 'white' } }} />
+          </ListItemButton>
+        </ListItem>
       </List>
     </div>
   );
