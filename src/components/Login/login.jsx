@@ -2,6 +2,7 @@ import React from "react";
 import Player from 'lottie-react'; // Use default import
 import animationData from '../../assets/nebula-login-lottie.json';
 import LockData from '../../assets/login-lock-lottie.json';
+import { Link } from "react-router-dom";
 
 const LoginPage = () => {
   return (
@@ -56,17 +57,19 @@ const LoginPage = () => {
           </div>
 
           <div className="flex items-center justify-between mb-6">
-            <a href="/login/forget-password" className="text-sm text-blue-500 hover:underline">
+            <Link to="/forget-password" className="text-sm text-blue-500 hover:underline">
               Forget Password ?
-            </a>
+            </Link>
           </div>
 
+          <Link to="/dashboard">
           <button
             type="submit"
             className="w-full bg-[#027f3f] text-white py-3 rounded-lg hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-500"
           >
             Sign in
           </button>
+          </Link>
         </form>
       </div>
     </div>

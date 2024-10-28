@@ -4,8 +4,9 @@ import React from "react";
 import Player from 'lottie-react'; // Use default import
 import animationData from '../../assets/nebula-login-lottie.json';
 import LockData from '../../assets/login-lock-lottie.json';
+import { Link } from "react-router-dom";
 
-const LoginPage = () => {
+const ForgetPassword = () => {
   return (
     <div className="min-h-screen flex flex-col md:flex-row justify-center items-center bg-white p-5">
       {/* Left Section: Illustration */}
@@ -56,9 +57,11 @@ const LoginPage = () => {
           <br/>
           <br/>
           <div className="flex items-center justify-between mb-6">
+              <Link to="/">
               <p className="text-sm text-blue-500 hover:underline">
                 &larr; Back to Login
               </p>
+              </Link>
           </div>
         </form>
       </div>
@@ -66,4 +69,4 @@ const LoginPage = () => {
   );
 }
 
-export default LoginPage;
+export default ForgetPassword;
