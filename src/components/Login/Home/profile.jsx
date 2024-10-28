@@ -138,10 +138,10 @@ const UserProfileSettings = () => {
           >
             {imageUrl ? <img src={imageUrl} alt="avatar" style={{ width: '100%' }} /> : uploadButton}
           </Upload>
-          <p className="text-sm text-center mb-1">Allowed: *.jpeg, *.jpg, *.png, *.gif</p>
+          <p className="text-sm text-center mb-1">Allowed: *.jpeg, *.jpg, *.png</p>
           <p className="text-sm text-center">Max size of 3.1 MB</p>
           <div className="flex items-center mt-2">
-            <label htmlFor="public-profile" className="mr-2">Public Profile</label>
+            <label htmlFor="public-profile" className="mr-2">Public Profile Picture</label>
           </div>
           <button className="mt-4 px-4 py-2 text-white bg-[#4c5d34] rounded-lg">
             Save Image
