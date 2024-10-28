@@ -21,7 +21,7 @@ const UserProfile = () => {
       <div className="flex flex-col md:flex-row items-center justify-center p-4">
         {/* Left Side - Profile Info */}
         <div className="w-full md:w-1/3 bg-white shadow-md rounded-lg p-6 mt-16 md:mt-0">
-          <h1 className="text-xl font-bold">User Name</h1>
+          <h1 className="text-xl font-bold">@username</h1>
           <p className="text-gray-600">TS FullStack</p>
 
           <div className="mt-4">
@@ -67,6 +67,66 @@ const UserProfile = () => {
               <span className="text-gray-400 text-sm">January, 10</span>
             </li>
           </ul>
+        </div>
+      </div>
+
+      {/* User Profile Settings Section */}
+      <UserProfileSettings />
+    </div>
+  );
+};
+
+
+
+const UserProfileSettings = () => {
+  return (
+    <div className="container mx-auto p-5">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mb-5">
+        {/* User Profile Section */}
+        <div className="flex flex-col items-center justify-center p-5 border rounded-lg shadow-md">
+          <div className="bg-teal-200 rounded-full w-24 h-24 flex items-center justify-center mb-3">
+            {/* Profile Image Placeholder */}
+            <span className="text-xl text-teal-600">👤</span>
+          </div>
+          <p className="text-sm text-center mb-1">Allowed: *.jpeg, *.jpg, *.png, *.gif</p>
+          <p className="text-sm text-center">Max size of 3.1 MB</p>
+          <div className="flex items-center mt-2">
+            <label htmlFor="public-profile" className="mr-2">Public Profile</label>
+            <input id="public-profile" type="checkbox" />
+          </div>
+          <button className="mt-4 px-4 py-2 text-white bg-red-500 rounded-lg">
+            Delete User
+          </button>
+        </div>
+        {/* User Info Form Section */}
+        <div className="bg-white p-5 border rounded-lg shadow-md flex flex-col">
+          <h2 className="text-xl font-semibold mb-4">Edit User Information</h2>
+          <form>
+            {/* User Information Fields */}
+            {['Username', 'Phone', 'Email', 'Address', 'City', 'Code'].map((field, index) => (
+              <div key={index} className="mb-4">
+                <label className="block text-sm font-medium text-gray-700 mb-1">{field}</label>
+                <input
+                  type="text"
+                  className="block w-full px-3 py-2 border rounded-md shadow-sm focus:outline-none focus:ring focus:ring-teal-300"
+                  placeholder={field}
+                />
+              </div>
+            ))}
+            {/* About Field */}
+            <div className="mb-4">
+              <label className="block text-sm font-medium text-gray-700 mb-1">About</label>
+              <textarea
+                className="block w-full px-3 py-2 border rounded-md shadow-sm focus:outline-none focus:ring focus:ring-teal-300"
+                rows="3"
+                placeholder="Tell us about yourself"
+              />
+            </div>
+            {/* Save Changes Button */}
+            <button className="w-full px-4 py-2 text-white bg-green-500 rounded-lg">
+              Save Changes
+            </button>
+          </form>
         </div>
       </div>
     </div>
