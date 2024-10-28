@@ -25,7 +25,7 @@ const Card = ({ title, description, resources, submissionClosed }) => {
             submissionClosed ? 'bg-red-500' : 'bg-green-500'
           }`}
         >
-          {submissionClosed ? 'Submission Closed' : 'Submit'}
+          {submissionClosed ? 'Application Closed' : 'Apply'}
         </button>
       </div>
     </div>
