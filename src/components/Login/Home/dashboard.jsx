@@ -17,7 +17,6 @@ import HomeIcon from '@mui/icons-material/Home';
 import CalendarTodayIcon from '@mui/icons-material/CalendarToday';
 import AssignmentIcon from '@mui/icons-material/Assignment';
 import GroupIcon from '@mui/icons-material/Group';
-import SettingsIcon from '@mui/icons-material/Settings';
 import ExitToAppIcon from '@mui/icons-material/ExitToApp';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import { Link } from 'react-router-dom';
@@ -80,14 +79,6 @@ function Dashboard(props) {
               <AccountCircleIcon style={{ color: 'white' }} />
             </ListItemIcon>
             <ListItemText primary="Profile" primaryTypographyProps={{ style: { color: 'white' } }} />
-          </ListItemButton>
-        </ListItem>
-        <ListItem disablePadding>
-          <ListItemButton component={Link} to="/custom-settings-path">
-            <ListItemIcon>
-              <SettingsIcon style={{ color: 'white' }} />
-            </ListItemIcon>
-            <ListItemText primary="Settings" primaryTypographyProps={{ style: { color: 'white' } }} />
           </ListItemButton>
         </ListItem>
         <ListItem disablePadding>
