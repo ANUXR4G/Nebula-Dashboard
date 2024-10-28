@@ -55,7 +55,7 @@ function Dashboard(props) {
           </ListItemButton>
         </ListItem>
         <ListItem disablePadding>
-          <ListItemButton component={Link} to="/custom-problem-statement-path">
+          <ListItemButton component={Link} to="/dashboard/problem-statement">
             <ListItemIcon>
               <AssignmentIcon style={{ color: 'white' }} />
             </ListItemIcon>

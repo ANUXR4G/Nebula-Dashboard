@@ -6,6 +6,7 @@ import ForgetPassword from './components/Login/forgetpass';
 import HomePage from './components/Login/Home/homepage';
 import DateCalendarFormProps from './components/Login/Home/calender';
 import UserProfile from './components/Login/Home/profile';
+import Problemstatement from './components/Login/Home/problemstatement';
 
 const route = createBrowserRouter([
   {
@@ -31,6 +32,10 @@ const route = createBrowserRouter([
       {
         path: "/dashboard/profile",
         element: <UserProfile/>
+      },
+      {
+        path: "/dashboard/problem-statement",
+        element: <Problemstatement/>
       },
     ]
   }
