@@ -35,8 +35,7 @@ const UserProfile = () => {
               <p><strong>Full Name:</strong> admin</p>
               <p><strong>Role:</strong> Developer</p>
               <p><strong>Country:</strong> India</p>
-              <p><strong>Language:</strong> English</p>
-              <p><strong>Contact:</strong> +(123)456-7890</p>
+              <p><strong>Phone:</strong> +(123)456-7890</p>
             </div>
           </div>
         </div>
@@ -103,7 +102,7 @@ const UserProfileSettings = () => {
           <h2 className="text-xl font-semibold mb-4">Edit User Information</h2>
           <form>
             {/* User Information Fields */}
-            {['Username', 'Phone', 'Email', 'Address', 'City', 'Code'].map((field, index) => (
+            {['Username', 'Full Name', 'Role', 'Country', 'Phone'].map((field, index) => (
               <div key={index} className="mb-4">
                 <label className="block text-sm font-medium text-gray-700 mb-1">{field}</label>
                 <input
