@@ -4,7 +4,7 @@ const UserProfile = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Banner Section */}
-      <div className="relative h-40 md:h-60 bg-teal-700">
+      <div className="relative h-40 md:h-60 bg-[#4c5d34]">
         <img
           src="https://via.placeholder.com/1500x400" // Replace this with the actual banner image
           alt="Banner"
