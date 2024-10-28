@@ -71,11 +71,12 @@ const UserProfile = () => {
 
       {/* User Profile Settings Section */}
       <UserProfileSettings />
+
+      {/* Update Password Section */}
+      <UpdatePassword />
     </div>
   );
 };
-
-
 
 const UserProfileSettings = () => {
   return (
@@ -128,6 +129,56 @@ const UserProfileSettings = () => {
           </form>
         </div>
       </div>
+    </div>
+  );
+};
+
+const UpdatePassword = () => {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Logic for updating the password can be added here
+    alert('Password updated successfully!');
+  };
+
+  return (
+    <div className="max-w-full mx-auto p-5 bg-white border rounded-lg shadow-md">
+      <h2 className="text-xl font-semibold mb-5">Update Password</h2>
+      <form onSubmit={handleSubmit}>
+        {/* Old Password */}
+        <div className="mb-4">
+          <label className="block text-sm font-medium text-gray-700 mb-1">Old Password</label>
+          <input
+            type="password"
+            className="block w-full px-3 py-2 border rounded-md shadow-sm focus:outline-none focus:ring focus:ring-green-300"
+            placeholder="Enter your old password"
+            required
+          />
+        </div>
+        {/* New Password */}
+        <div className="mb-4">
+          <label className="block text-sm font-medium text-gray-700 mb-1">New Password</label>
+          <input
+            type="password"
+            className="block w-full px-3 py-2 border rounded-md shadow-sm focus:outline-none focus:ring focus:ring-green-300"
+            placeholder="Enter new password"
+            required
+          />
+        </div>
+        {/* Confirm New Password */}
+        <div className="mb-4">
+          <label className="block text-sm font-medium text-gray-700 mb-1">Confirm New Password</label>
+          <input
+            type="password"
+            className="block w-full px-3 py-2 border rounded-md shadow-sm focus:outline-none focus:ring focus:ring-green-300"
+            placeholder="Confirm new password"
+            required
+          />
+        </div>
+        {/* Save Changes Button */}
+        <button className="w-full px-4 py-2 text-white bg-green-500 rounded-lg hover:bg-green-600 focus:outline-none transition duration-200">
+          Save Changes
+        </button>
+      </form>
     </div>
   );
 };
