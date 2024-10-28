@@ -82,7 +82,7 @@ function Dashboard(props) {
           </ListItemButton>
         </ListItem>
         <ListItem disablePadding>
-          <ListItemButton component={Link} to="/custom-log-out-path">
+          <ListItemButton component={Link} to="/">
             <ListItemIcon>
               <ExitToAppIcon style={{ color: 'white' }} />
             </ListItemIcon>
