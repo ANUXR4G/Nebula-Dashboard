@@ -10,7 +10,7 @@ function Layout() {
     <div>
       <ToastContainer/>
       <Dashboard/>
-      <div className='lg:ml-[16%] lg:mt-[4%]  lg:p-6 flex  flex-col justify-center h-full'>
+      <div className='lg:ml-[16.5%] lg:mt-[4%]  lg:p-6 mt-20 flex  flex-col justify-center h-full'>
       <Outlet/>
       </div>
       </div>
