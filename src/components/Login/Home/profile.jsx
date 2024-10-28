@@ -123,7 +123,7 @@ const UserProfileSettings = () => {
               />
             </div>
             {/* Save Changes Button */}
-            <button className="w-full px-4 py-2 text-white bg-green-500 rounded-lg">
+            <button className="w-full px-4 py-2 text-white bg-[#4c5d34] rounded-lg">
               Save Changes
             </button>
           </form>
@@ -175,7 +175,7 @@ const UpdatePassword = () => {
           />
         </div>
         {/* Save Changes Button */}
-        <button className="w-full px-4 py-2 text-white bg-green-500 rounded-lg hover:bg-green-600 focus:outline-none transition duration-200">
+        <button className="w-full px-4 py-2 text-white bg-[#4c5d34] rounded-lg hover:bg-green-600 focus:outline-none transition duration-200">
           Save Changes
         </button>
       </form>
