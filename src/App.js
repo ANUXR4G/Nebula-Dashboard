@@ -1,8 +1,7 @@
 import React from 'react';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
-
 import LoginPage from './components/Login/login';
-import Layout from './components/Login/Layout/dashboard';
+import Layout from './components/Login/Layout/layout';
 import ForgetPassword from './components/Login/forgetpass';
 import HomePage from './components/Login/Home/homepage';
 

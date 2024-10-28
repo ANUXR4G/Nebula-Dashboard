@@ -24,7 +24,7 @@ import logo from "../../../assets/nebula.png";
 
 const drawerWidth = 240;
 
-function Layout(props) {
+function Dashboard(props) {
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
 
@@ -129,8 +129,8 @@ function Layout(props) {
   );
 }
 
-Layout.propTypes = {
+Dashboard.propTypes = {
   window: PropTypes.func,
 };
 
-export default Layout;
+export default Dashboard;
