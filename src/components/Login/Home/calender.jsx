@@ -7,10 +7,10 @@ import { DateCalendar } from '@mui/x-date-pickers/DateCalendar';
 
 export default function DateCalendarFormProps() {
   return (
-    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '100vh' }}>
+    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }} className='min-h-full'>
       <LocalizationProvider dateAdapter={AdapterDayjs}>
         <DemoContainer components={['DateCalendar', 'DateCalendar']}>
-          <div style={{ width: '400px', height: '400px' }}>
+          <div style={{ width: '400px', height: '460px' }}>
             <DateCalendar defaultValue={dayjs()} readOnly />
           </div>
         </DemoContainer>

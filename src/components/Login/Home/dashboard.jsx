@@ -75,7 +75,7 @@ function Dashboard(props) {
       <Divider />
       <List className='bg-[#4c5d34]'>
         <ListItem disablePadding>
-          <ListItemButton component={Link} to="/custom-profile-path">
+          <ListItemButton component={Link} to="/dashboard/profile">
             <ListItemIcon>
               <AccountCircleIcon style={{ color: 'white' }} />
             </ListItemIcon>
