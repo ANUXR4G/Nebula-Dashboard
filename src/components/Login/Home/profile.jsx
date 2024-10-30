@@ -28,19 +28,19 @@ const UserProfile = () => {
       {/* Navigation Buttons */}
       <div className="flex justify-center space-x-4 p-4">
         <button
-          className={`px-4 py-2 rounded-lg ${activeSection === 'profile' ? 'bg-[#4c5d34] text-white' : 'bg-white text-black'}`}
+          className={`px-4 py-2 rounded-lg ${activeSection === 'profile' ? 'bg-[#4c5d34] text-white' : 'bg-[#818763] text-white'}`}
           onClick={() => setActiveSection('profile')}
         >
-          Profile
+          User Profile
         </button>
         <button
-          className={`px-4 py-2 rounded-lg ${activeSection === 'settings' ? 'bg-[#4c5d34] text-white' : 'bg-white text-black'}`}
+          className={`px-4 py-2 rounded-lg ${activeSection === 'settings' ? 'bg-[#4c5d34] text-white' : 'bg-[#818763] text-white'}`}
           onClick={() => setActiveSection('settings')}
         >
-          Settings
+          Profile Settings
         </button>
         <button
-          className={`px-4 py-2 rounded-lg ${activeSection === 'password' ? 'bg-[#4c5d34] text-white' : 'bg-white text-black'}`}
+          className={`px-4 py-2 rounded-lg ${activeSection === 'password' ? 'bg-[#4c5d34] text-white' : 'bg-[#818763] text-white'}`}
           onClick={() => setActiveSection('password')}
         >
           Update Password
