@@ -1,4 +1,6 @@
 import React from 'react';
+import AssignmentIcon from '@mui/icons-material/Assignment';
+
 
 const HomePage = () => {
   return (
@@ -32,17 +34,7 @@ const HomePage = () => {
           <h4 className="text-lg font-semibold">5</h4>
           <p className="text-sm">Applied Problem Statement</p>
           <div className="w-16 h-16 mt-4">
-            <svg className="w-full h-full" viewBox="0 0 36 36">
-              <circle
-                className="stroke-current text-white"
-                strokeWidth="3"
-                strokeDasharray="48, 100"
-                fill="none"
-                cx="18"
-                cy="18"
-                r="16"
-              />
-            </svg>
+          <AssignmentIcon style={{ color: 'white' }} />
           </div>
         </div>
 
