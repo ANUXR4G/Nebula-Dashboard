@@ -65,7 +65,7 @@ const LoginPage = () => {
           <Link to="/dashboard">
           <button
             type="submit"
-            className="w-full bg-[#027f3f] text-white py-3 rounded-lg hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-500"
+            className="w-full bg-[#4c5d34] text-white py-3 rounded-lg hover:bg-[#818763] focus:outline-none focus:ring-2 focus:ring-[#4c5d34]"
           >
             Sign in
           </button>

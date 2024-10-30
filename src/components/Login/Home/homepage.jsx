@@ -28,9 +28,9 @@ const HomePage = () => {
 
       {/* Right Section */}
       <div className="flex flex-col space-y-4 mt-6 md:mt-0 md:ml-6 md:flex-row md:space-y-0 md:space-x-4">
-        <div className="flex-1 bg-[#4c5d34] text-white rounded-lg p-4 flex flex-col items-center">
-          <h4 className="text-lg font-semibold">38,566</h4>
-          <p className="text-sm">Conversion</p>
+        <div className="flex-1 bg-[#4c5d34] text-white rounded-lg p-4 flex flex-col items-center text-center">
+          <h4 className="text-lg font-semibold">5</h4>
+          <p className="text-sm">Applied Problem Statement</p>
           <div className="w-16 h-16 mt-4">
             <svg className="w-full h-full" viewBox="0 0 36 36">
               <circle
@@ -46,9 +46,9 @@ const HomePage = () => {
           </div>
         </div>
 
-        <div className="flex-1 bg-[#a5a990] text-white rounded-lg p-4 flex flex-col items-center">
-          <h4 className="text-lg font-semibold">45,566</h4>
-          <p className="text-sm">Applications</p>
+        <div className="flex-1 bg-[#a5a990] text-white rounded-lg p-4 flex flex-col items-center text-center">
+          <h4 className="text-lg font-semibold">10</h4>
+          <p className="text-sm">Meeting With <br/> Mentors</p>
           <div className="w-16 h-16 mt-4">
             <svg className="w-full h-full" viewBox="0 0 36 36">
               <circle
