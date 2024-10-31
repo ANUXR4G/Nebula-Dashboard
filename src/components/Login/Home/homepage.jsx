@@ -34,7 +34,7 @@ const HomePage = () => {
           <h4 className="text-lg font-semibold">5</h4>
           <p className="text-sm">Applied Problem Statement</p>
           <div className="w-16 h-16 mt-4">
-          <AssignmentIcon style={{ color: 'white', fontSize: '4rem', opacity: '20%' }} />
+          <AssignmentIcon style={{ color: 'white', fontSize: '3.5rem', opacity: '20%' }} />
           </div>
         </div>
 
@@ -42,7 +42,7 @@ const HomePage = () => {
           <h4 className="text-lg font-semibold">10</h4>
           <p className="text-sm">Meeting With <br/> Mentors</p>
           <div className="w-16 h-16 mt-4">
-          <GroupIcon style={{ color: 'white', fontSize: '4rem', opacity: "20%" }}/>
+          <GroupIcon style={{ color: 'white', fontSize: '3.5rem', opacity: "20%" }}/>
           </div>
         </div>
       </div>
